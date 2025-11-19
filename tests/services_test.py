@@ -4,7 +4,6 @@ import unittest.mock
 from unittest.mock import MagicMock, patch
 
 import logging
-from distutils.version import LooseVersion
 
 import tests.fake_routing
 from tests.fakes import FakeFile, FakeUnitOfWork
@@ -16,6 +15,7 @@ sys.modules['routing'] = module
 from resources.lib import globals
 from resources.lib.services import AppService
 from resources.lib.repositories import UnitOfWork
+from resources.lib.packaging.version import Version as LooseVersion
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(format = '%(asctime)s %(module)s %(levelname)s: %(message)s',
