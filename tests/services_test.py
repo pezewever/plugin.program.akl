@@ -57,8 +57,8 @@ class Test_services(unittest.TestCase):
             FakeFile('/migrations/with/1.2.7.sql')
         ]
         
-        a = LooseVersion('1.5.0~rc4') 
-        b = LooseVersion('1.5.0~rc7')
+        a = LooseVersion('1.5.0rc4') 
+        b = LooseVersion('1.5.0rc7')
         
         c = a < b
         self.assertTrue(c)
